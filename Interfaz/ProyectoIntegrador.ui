@@ -139,7 +139,7 @@
  </widget>
  <resources>
   <include location="../assets/recursos.qrc"/>
-  <include location="recursos.qrc"/>
+  <include location="../assets/recursos.qrc"/>
  </resources>
  <connections/>
 </ui>

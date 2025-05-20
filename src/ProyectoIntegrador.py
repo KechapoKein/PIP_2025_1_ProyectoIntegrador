@@ -58,7 +58,8 @@ class MyMainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
                 linea = self.arduino.readline().decode().strip()
                 if linea.startswith("TEMP:"):
                     valor = linea.replace("TEMP:", "")
-                    self.temperatura.setText(f"{valor} °C")
+                    temperatura_real = float(valor) / 10
+                    self.temperatura.setText(f"{temperatura_real} °C")
                 elif linea.startswith("DIST:"):
                     valor = linea.replace("DIST:", "")
                     self.distancia.setText(f"{valor} cm")
